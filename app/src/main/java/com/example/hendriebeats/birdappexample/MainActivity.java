@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
                 nameView.setText("");
                 descriptionView.setText("");
+                //git testing line
 
                 db.addBird(new Bird(5, nameValue, descriptionValue));
 
