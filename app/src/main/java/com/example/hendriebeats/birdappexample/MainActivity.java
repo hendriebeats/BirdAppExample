@@ -1,5 +1,6 @@
 package com.example.hendriebeats.birdappexample;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -58,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
 
                 db.addBird(new Bird(5, nameValue, descriptionValue));
 
+            }
+        });
+
+        Button viewBirds = (Button) findViewById(R.id.viewBirds);
+        viewBirds.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ViewBirds.class);
+                startActivity(i);
             }
         });
 
